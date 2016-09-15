@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myFirstApp">
 <head>
 	<meta charset="utf-8">
-	<title> Hello Angular</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="angular.min.js"></script>
+	<script src="app.js"></script>
+	<style> 
+	    body { 
+	      font-family: 'Roboto', sans-serif;
+	      text-align: center;
+	      background-color: #DAECF3;
+	      color: #022D41;
+	      margin-top: 100px;
+	    }
+
+	    h1 {
+	    	font-size: 28px;
+	    }
+
+	    .message {
+	    	margin-top: 30px;
+	    	color: #FE424D;
+	    }
+
+	    button {
+	    	background-color: #1AA6B7;
+	    	border-radius: 5px;
+	    	border-color: transparent;
+	    	color: #fff;
+	    	padding: 8px;
+	    	margin-left: 10px;
+	    	cursor:pointer;
+	    }
+
+	    button:hover {
+	    	background-color: #022D41;
+	    	cursor:pointer;
+	    }
+
+	</style>
+	<title> What do you eat for lunch?</title>
 </head>
 <body>
- <h1> Hello </h1>
+ <h1>Please enter below a coma-separated items of what do you eat for lunch?</h1>	
+ <div ng-controller="MyFirstController">
+ 	
+ 	<input type="text" 
+ 	    ng-model="items">
+    <button ng-click="displayMessage()"> Check If Too Much </button>
+    <div class="message"> {{message}} </div>
+ </div>	
 </body>
 </html>
